@@ -21,7 +21,34 @@
 	  -o-transform-style: preserve-3d;
 	  transform-style: preserve-3d;
 	}
+	.card.flipped {
+	  -webkit-transform: rotateY( 180deg );
+	  -moz-transform: rotateY( 180deg );
+	  -ms-transform: rotateY( 180deg );
+	  -o-transform: rotateY( 180deg );
+	  transform: rotateY( 180deg );
+	}
+	.card .back {
+	  background: blue;
+	  -webkit-transform: rotateY( 180deg );
+	  -moz-transform: rotateY( 180deg );
+	  -ms-transform: rotateY( 180deg );
+	  -o-transform: rotateY( 180deg );
+	  transform: rotateY( 180deg );
+	}
+    img {
+		  height: 100%;
+		  width: 100%;
+		  position: absolute;
+		  float:left;
+		  -webkit-backface-visibility: hidden;
+		  -moz-backface-visibility: hidden;
+		  -ms-backface-visibility: hidden;
+		  -o-backface-visibility: hidden;
+		  backface-visibility: hidden;
+		}
 }
+
 
 @media screen and (max-width: 690px) {
 	#game-module{
