@@ -21,6 +21,13 @@ module.exports = function (grunt) {
 				},
 				files: { "wwwroot/css/styles.css": "assets/*.less" }
 			},
+		},
+		watch: {
+			less: {
+				// We watch and compile less files as normal but don't live reload here 
+				files: ['assets/*.less'],
+				tasks: ['less'],
+			}
 		}
 	});
 	// This command registers the default task which will install bower packages into wwwroot/lib
@@ -29,7 +36,6 @@ module.exports = function (grunt) {
 	// The following line loads the grunt plugins.
 	// This line needs to be at the end of this this file.
 	grunt.loadNpmTasks("grunt-bower-task");
-
-
 	grunt.loadNpmTasks("grunt-contrib-less");
+	grunt.loadNpmTasks("grunt-contrib-watch");
 };
