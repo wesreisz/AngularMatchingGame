@@ -190,9 +190,10 @@ _Pvt_Extensions/
 ModelManifest.xml
 
 #custom
-lib/*
-css/*
-bin/*
+src/AngularMatchingGame/wwwroot/lib/*
+src/AngularMatchingGame/wwwroot/css/*
+src/AngularMatchingGame/wwwroot/bin/*
+
 logs/*
 !.gitkeep
 node_modules/
