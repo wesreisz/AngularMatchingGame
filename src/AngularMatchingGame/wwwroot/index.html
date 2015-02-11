@@ -10,26 +10,42 @@
 	<script type="text/javascript" src="lib/jquery/jquery.js"></script>
 	<script type="text/javascript" src="lib/bootstrap/js/bootstrap.js"></script>
 	<script type="text/javascript" src="lib/angular/angular.js"></script>
+	<script type="text/javascript" src="lib/angular-animate/angular-animate.js"></script>
+	<script type="text/javascript" src="lib/angular-route/angular-route.js"></script>
 	<script type="text/javascript" src="scripts/app.js"></script>
 	<script type="text/javascript" src="scripts/game.js"></script>
 	<script type="text/javascript" src="scripts/shuffle.js"></script>
 </head>
-<body ng-controller="GameController">
-	<div class="container" id="game-module">
-		<div class="board" >
-			<h3>{{game.title}}</h3>
-			<div class="stats text-center">
-				<span>Pairs left to match: {{game.unmatchedPairs}}</span>
-				<span>Turns Taken: {{game.turn}}</span>
-			</div>
-			<div ng-repeat="tile in game.tileDeck" ng-click="game.flipTile(tile)">
-				<div class="card" ng-class="{flipped: !tile.flipped}">
-					<img class="front" ng-src="img/{{tile.tileTitle}}.png">
-					<img class="back" ng-src="img/back.png">
+<body>
+	<div>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#/">Bootstrap'n</a>
 				</div>
-			</div>
-			<div class="message">{{game.message}}</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="#/">Index<span class="sr-only">(current)</span></a></li>
+						<li><a href="#/play">Play</a></li>
+						<li><a href="#/about">About Us</a></li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+		<br />
+		<div class="view-animate-container content">
+			<div ng-view class="view-animate"></div>
 		</div>
+
 	</div>
 </body>
 </html>
