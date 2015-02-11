@@ -17,7 +17,11 @@
 	<div class="container" id="game-module">
 		<div class="board" >
 			<h3>{{game.title}}</h3>
-			<img src="img/{{tile}}.png" alt="{{tile}}" ng-repeat="tile in game.tileDeck" class="card" />
+			<div ng-repeat="tile in game.tileDeck">
+				<div class="card">
+					<img class="front" ng-src="img/{{tile.tileTitle}}.png">
+				</div>
+			</div>
 		</div>
 	</div>
 </body>
