@@ -1,0 +1,22 @@
+{
+	"name": "AngularMatchingGame",
+	"private": true,
+	"dependencies": {
+		"bootstrap": "~3.0.0",
+		"jquery": "~1.10.2",
+		"angular": "^1.3.13"
+	},
+	"exportsOverride": {
+		"bootstrap": {
+			"js": "dist/js/*.*",
+			"css": "dist/css/*.*",
+			"fonts": "dist/fonts/*.*"
+		},
+		"jquery": {
+			"/": "jquery.{js,min.js,min.map}"
+		},
+		"angular": {
+			"/": "*angular.{js,min.js,min.js.map}"
+		}
+	}
+}
