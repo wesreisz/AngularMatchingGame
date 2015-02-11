@@ -13,8 +13,11 @@
 	<script type="text/javascript" src="scripts/app.js"></script>
 </head>
 <body ng-controller="GameController as cntl">
-	<div class=" container" id="game-module">
-		<h3>{{cntl.title}}</h3>
+	<div class="container" id="game-module">
+		<div class="board" >
+			<h3>{{cntl.title}}</h3>
+			<img src="img/{{tile}}.png" alt="{{tile}}" ng-repeat="tile in cntl.tileNames" class="card" />
+		</div>
 	</div>
 </body>
 </html>
