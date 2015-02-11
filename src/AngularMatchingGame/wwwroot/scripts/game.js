@@ -8,6 +8,9 @@ Game.MESSAGE_WON = 'You win!';
 
 function Game(title) {
 	var _TILENAMES = ['8-ball', 'baked-potato', 'dinosaur', 'kronos', 'rocket', 'that-guy', 'zeppelin', 'cards'];
+	this.message = Game.MESSAGE_CLICK;
+	this.unmatchedPairs = _TILENAMES.length;
+	this.turn = 0;
 	this.title = title;
 	this.tileDeck = makeDeck(_TILENAMES).shuffle();
 	this.flipTile = function (tile) {
