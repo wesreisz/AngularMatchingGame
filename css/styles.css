@@ -1,0 +1,122 @@
+.view-animate-container {
+  position: relative;
+  height: 1000px!important;
+  background: white;
+  overflow: hidden;
+}
+.view-animate {
+  padding: 10px;
+}
+.view-animate.ng-enter,
+.view-animate.ng-leave {
+  -webkit-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s;
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s;
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+}
+.view-animate.ng-enter {
+  left: 100%;
+}
+.view-animate.ng-enter.ng-enter-active {
+  left: 0;
+}
+.view-animate.ng-leave.ng-leave-active {
+  left: -100%;
+}
+@media screen and (max-width: 690px) {
+  .view-animate-container {
+    height: 500px!important;
+  }
+}
+
+#game-module {
+  width: 700px;
+}
+#game-module .board {
+  display: inline;
+  padding: 10px;
+}
+#game-module .card {
+  width: 165px;
+  height: 200px;
+  display: inline;
+  float: left;
+  -webkit-transition: -webkit-transform 3s;
+  -moz-transition: -moz-transform 3s;
+  -ms-transition: -ms-transform 3s;
+  -o-transition: -o-transform 3s;
+  transition: transform 3s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+#game-module .card.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+#game-module .card .back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+#game-module img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  float: left;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+@media screen and (max-width: 690px) {
+  #game-module {
+    width: 400px;
+  }
+  #game-module .card {
+    width: 90px;
+    height: 75px;
+  }
+  #game-module .card .front {
+    width: 90px;
+    height: 75px;
+  }
+}
+
+* {
+  font-family: Verdana;
+  background-color: white;
+}
+h3 {
+  font-size: 30px;
+  width: 100%;
+  text-align: center;
+}
+.message {
+  clear: both;
+  text-align: center;
+  display: block;
+  font-size: 20pt;
+}
+@media screen and (max-width: 690px) {
+  h3 {
+    font-size: 18px;
+  }
+  .message {
+    font-size: 16pt;
+  }
+}
