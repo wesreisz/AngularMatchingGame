@@ -11,12 +11,13 @@
 	<script type="text/javascript" src="lib/bootstrap/js/bootstrap.js"></script>
 	<script type="text/javascript" src="lib/angular/angular.js"></script>
 	<script type="text/javascript" src="scripts/app.js"></script>
+	<script type="text/javascript" src="scripts/game.js"></script>
 </head>
-<body ng-controller="GameController as cntl">
+<body ng-controller="GameController">
 	<div class="container" id="game-module">
 		<div class="board" >
-			<h3>{{cntl.title}}</h3>
-			<img src="img/{{tile}}.png" alt="{{tile}}" ng-repeat="tile in cntl.tileNames" class="card" />
+			<h3>{{game.title}}</h3>
+			<img src="img/{{tile}}.png" alt="{{tile}}" ng-repeat="tile in game.tileDeck" class="card" />
 		</div>
 	</div>
 </body>
