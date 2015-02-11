@@ -189,6 +189,10 @@ GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
 
+#custom
+lib/*
+css/*
+bin/*
 logs/*
 !.gitkeep
 node_modules/
